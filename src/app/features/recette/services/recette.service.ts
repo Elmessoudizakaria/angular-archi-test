@@ -5,7 +5,7 @@ import { map, catchError } from 'rxjs/operators';
 export class RecetteService {
   constructor(private http: HttpClient) {}
   recetteList() {
-    return this.http.get('http://localhost:3500/recettes').pipe(
+    return this.http.get<any[]>('http://localhost:3500/recettes').pipe(
       map(el => el),
       catchError(err => err),
     );

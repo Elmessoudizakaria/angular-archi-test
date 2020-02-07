@@ -10,9 +10,9 @@ import { AngularMaterialModule } from './angular-material.module';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    AngularMaterialModule,
     AppRoutingModule,
     RecetteModule,
-    AngularMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

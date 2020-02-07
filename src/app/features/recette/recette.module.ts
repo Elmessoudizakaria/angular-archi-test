@@ -6,10 +6,16 @@ import { RecetteRoutingModule } from './recette-routing.module';
 import { RecetteService } from './services/recette.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AddRecetteComponent } from './components/add-recette/add-recette.component';
+import { AngularMaterialModule } from 'src/app/angular-material.module';
 
 @NgModule({
   declarations: [RecetteContainer, RecetteListComponent, AddRecetteComponent],
-  imports: [CommonModule, RecetteRoutingModule, HttpClientModule],
+  imports: [
+    CommonModule,
+    RecetteRoutingModule,
+    HttpClientModule,
+    AngularMaterialModule,
+  ],
   providers: [RecetteService],
 })
 export class RecetteModule {}

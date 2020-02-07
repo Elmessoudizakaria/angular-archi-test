@@ -1,88 +1,79 @@
-import { NgModule } from '@angular/core';
-
-import { LayoutModule } from '@angular/cdk/layout';
-
+/*
+ * Created Date: Monday January 20th 2020
+ * Author: Youssef ALAOUI BICHR
+ * -----
+ * Last Modified: Monday January 20th 2020 2:54:05 pm
+ * Modified By: Youssef ALAOUI BICHR
+ * HISTORY:
+ * 2020-01-20	Material angular module created
+ */
 //
-// Form Controls
+// Material CDK Stuff
 //
-
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatSelectModule } from '@angular/material/select';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-
-// import { MatNativeDateModule } from '@angular/material';
-
-//
-// Navigation
-//
-
-import { MatMenuModule } from '@angular/material/menu';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-
-//
-// Layout
-//
-
-import { MatCardModule } from '@angular/material/card';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatListModule } from '@angular/material/list';
-import { MatStepperModule } from '@angular/material/stepper';
-import { MatTabsModule } from '@angular/material/tabs';
-import { MatTreeModule } from '@angular/material/tree';
-
-//
-// Buttons & Indicators
-//
-
-import { MatButtonModule } from '@angular/material/button';
-import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { MatBadgeModule } from '@angular/material/badge';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatIconModule } from '@angular/material/icon';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-
-//
-// Popups & Modals
-//
-
-import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatTooltipModule } from '@angular/material/tooltip';
-
-//
-// Data Table
-//
-
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
-import { MatTableModule } from '@angular/material/table';
-import { FormsModule } from '@angular/forms';
-
-import { A11yModule } from '@angular/cdk/a11y';
+import { A11yModule, HighContrastModeDetector } from '@angular/cdk/a11y';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { LayoutModule } from '@angular/cdk/layout';
 import { PortalModule } from '@angular/cdk/portal';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CdkStepperModule } from '@angular/cdk/stepper';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
+//
+// NgModule
+//
+import { NgModule } from '@angular/core';
+//
+//
+// Material components
+//
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSortModule } from '@angular/material/sort';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTreeModule } from '@angular/material/tree';
 import { MatNativeDateModule } from '@angular/material/core';
+import { Platform } from '@angular/cdk/platform';
+import { AutofillMonitor } from '@angular/cdk/text-field';
+import { ContentObserver } from '@angular/cdk/observers';
+//
+// Custom directives
+//
 
 @NgModule({
   declarations: [],
   imports: [
-    // FormsModule,
-
+    //
+    // Material CDK Stuff
+    //
     A11yModule,
     DragDropModule,
     PortalModule,
@@ -90,8 +81,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     CdkStepperModule,
     CdkTableModule,
     CdkTreeModule,
+    //
     // angular materials module
-
+    //
     MatAutocompleteModule,
     MatCheckboxModule,
     MatDatepickerModule,
@@ -101,14 +93,13 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatSelectModule,
     MatSliderModule,
     MatSlideToggleModule,
-
     MatNativeDateModule,
+
     // MatMomentDateModule,
 
     MatMenuModule,
     MatSidenavModule,
     MatToolbarModule,
-
     MatCardModule,
     MatDividerModule,
     MatExpansionModule,
@@ -117,7 +108,6 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatStepperModule,
     MatTabsModule,
     MatTreeModule,
-
     MatButtonModule,
     MatButtonToggleModule,
     MatBadgeModule,
@@ -125,20 +115,21 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatIconModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
-
     MatBottomSheetModule,
     MatDialogModule,
     MatSnackBarModule,
     MatTooltipModule,
-
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
   ],
   exports: [
-    // angular materials module
-    LayoutModule,
+    A11yModule,
 
+    //
+    // angular materials module
+    //
+    LayoutModule,
     MatAutocompleteModule,
     MatCheckboxModule,
     MatDatepickerModule,
@@ -148,14 +139,11 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatSelectModule,
     MatSliderModule,
     MatSlideToggleModule,
-
     MatNativeDateModule,
     // MatMomentDateModule,
-
     MatMenuModule,
     MatSidenavModule,
     MatToolbarModule,
-
     MatCardModule,
     MatDividerModule,
     MatExpansionModule,
@@ -164,7 +152,6 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatStepperModule,
     MatTabsModule,
     MatTreeModule,
-
     MatButtonModule,
     MatButtonToggleModule,
     MatBadgeModule,
@@ -172,16 +159,19 @@ import { MatNativeDateModule } from '@angular/material/core';
     MatIconModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
-
     MatBottomSheetModule,
     MatDialogModule,
     MatSnackBarModule,
     MatTooltipModule,
-
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
   ],
-  providers: []
+  providers: [
+    HighContrastModeDetector,
+    Platform,
+    AutofillMonitor,
+    ContentObserver,
+  ],
 })
 export class AngularMaterialModule {}
